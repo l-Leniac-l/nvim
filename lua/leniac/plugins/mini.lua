@@ -29,10 +29,12 @@ return {
     require('mini.jump2d').setup {}
     local pick = require 'mini.pick'
     pick.setup {}
+    vim.keymap.set('n', '<leader>ff', pick.builtin.files)
+    vim.keymap.set('n', '<leader>fb', pick.builtin.buffers)
+    vim.keymap.set('n', '<leader>fg', pick.builtin.grep_live)
 
     -- Appearance
     require('mini.icons').setup {}
-    require('mini.files').setup {}
     require('mini.indentscope').setup {}
     local hipatterns = require 'mini.hipatterns'
     hipatterns.setup {
@@ -60,10 +62,5 @@ return {
       },
     }
     require('mini.trailspace').setup {}
-
-    vim.keymap.set('n', '<leader>ff', pick.builtin.files)
-    vim.keymap.set('n', '<leader>fb', pick.builtin.buffers)
-    vim.keymap.set('n', '<leader>fg', pick.builtin.grep_live)
-    vim.keymap.set('n', '<leader>pv', '<cmd>:lua MiniFiles.open()<cr>')
   end,
 }
