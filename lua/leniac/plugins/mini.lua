@@ -27,11 +27,6 @@ return {
     }
     require('mini.jump').setup {}
     require('mini.jump2d').setup {}
-    local pick = require 'mini.pick'
-    pick.setup {}
-    vim.keymap.set('n', '<leader>ff', pick.builtin.files)
-    vim.keymap.set('n', '<leader>fb', pick.builtin.buffers)
-    vim.keymap.set('n', '<leader>fg', pick.builtin.grep_live)
 
     -- Appearance
     require('mini.icons').setup {}
